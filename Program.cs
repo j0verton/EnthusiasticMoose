@@ -8,30 +8,10 @@ namespace EnthusiasticMoose
         static void Main(string[] args)
         {
 
-            List<string> answers = new List<string> {
-            "As I see it, yes.",
-            "Ask again later.",
-            "Better not tell you now.",
-            "Cannot predict now.",
-            "Concentrate and ask again.",
-            "Don’t count on it.",
-            "It is certain.",
-            "It is decidedly so.",
-            "Most likely.",
-            "My reply is no.",
-            "My sources say no.",
-            "Outlook not so good.",
-            "Outlook good.",
-            "Reply hazy, try again.",
-            "Signs point to yes.",
-            "Very doubtful.",
-            "Without a doubt.",
-            "Yes.",
-            "Yes – definitely.",
-            "You may rely on it.",
-        };
 
-            Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+            Console.WriteLine("--------------------------------------------");
+
+            Console.WriteLine("| Player | Computer|");
             Console.WriteLine("--------------------------------------------");
 
             // Let the moose speak!
@@ -39,9 +19,87 @@ namespace EnthusiasticMoose
             MooseSays("Ask me a question!");
 
 
-            Moose8Ball(answers);
+        }
+
+
+        static bool Throw()
+        {
+            int PlayerScore;
+            int PCScore;
+            PrintHeader()
+            int Playerthrow = Console.ReadLine();
+            while (Playerthrow == 1 || Playerthrow == 2 || Playerthrow == 3)
+            {
+                int PCthrow = new Random().Next(1, 3);
+                switch (Playerthrow)
+                {
+                    case 1:
+                        Console.WriteLine("Case 1");
+                        switch (PCthrow)
+                        {
+                            case 1:
+                                Console.WriteLine("Case 1");
+                                break;
+                            case 2:
+                                Console.WriteLine("Case 2");
+                                break;
+                            case 3:
+                                Console.WriteLine("Case 3");
+                                break;
+
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("Case 2");
+                        switch (PCthrow)
+                        {
+                            case 1:
+                                Console.WriteLine("Case 1");
+                                break;
+                            case 2:
+                                Console.WriteLine("Case 2");
+                                break;
+                            case 3:
+                                Console.WriteLine("Case 3");
+                                break;
+
+                        }
+                        break;
+                    case 3:
+                        Console.WriteLine("Case 3");
+                        switch (PCthrow)
+                        {
+                            case 1:
+                                Console.WriteLine("Case 1");
+                                break;
+                            case 2:
+                                Console.WriteLine("Case 2");
+                                break;
+                            case 3:
+                                Console.WriteLine("Case 3");
+                                break;
+
+                        }
+                        break;
+                }
+                PrintHeader()
+            int Playerthrow = Console.ReadLine();
+
+            }
+        }
+
+        static void PrintHeader(int PlayerScore = 0, int PCScore = 0)
+        {
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine($"| Player: {PlayerScore} | Computer: {PCScore}|");
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("What would you like to throw?");
+            Console.WriteLine("1) Rock");
+            Console.WriteLine("2) Paper");
+            Console.WriteLine("3) Scissors");
 
         }
+
 
 
 
